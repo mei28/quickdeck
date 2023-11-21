@@ -15,11 +15,9 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let html = reqwest::get(url).await?.text().await?;
 
     let embed_url = extract_embed_url(&html)?;
-    println!("Embed URL: {}", embed_url);
 
-    // ここでブラウザを開く
     if webbrowser::open(&embed_url).is_ok() {
-        println!("Slide opened in web browser.");
+        println!("Slide opened in web browser: {}", embed_url);
     } else {
         eprintln!("Failed to open web browser.");
     }

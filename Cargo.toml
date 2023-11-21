@@ -2,11 +2,14 @@
 name = "quickdeck"
 version = "0.1.0"
 edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+description = "A CLI tool to quickly open SlideShare presentations."
+license = "MIT"
+repository = "https://github.com/mei28/quickdeck"
+keywords = ["slideshare", "presentation", "cli"]
+categories = ["command-line-utilities"]
 
 [dependencies]
-reqwest = "0.11" 
-tokio = { version = "1", features = ["full"] }  
+reqwest = "0.11"
+tokio = { version = "1", features = ["full"] }
 regex = "1.10.2"
 webbrowser = "0.8.12"
